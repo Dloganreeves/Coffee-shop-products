@@ -1,0 +1,29 @@
+﻿@model List<Product>
+
+    <form asp-method="post" asp-action="index" asp-controller="Coffee">
+    <label for="Name">Enter Coffee type:</label>
+    <input type="Name" name="Name" id="Name" />
+
+    <label for="Description">Enter coffee description:</label>
+    <input type="text" name="Description" id="Description" />
+
+    <label for="Price">Enter price:</label>
+    <input type="number" name="Price" id="Price" />
+
+    <label for="Category"> Enter Category</label>
+    <input type="text" name="Category" id="Category"/>
+
+    <input type="submit" />
+
+</form>
+
+<ol> 
+    @{
+        foreach (Product c in Model)
+        {
+           <li> <a asp-action="Details" asp-route-id="@c.Id">@c.Name</a></li> 
+        }
+    }
+
+
+</ol>

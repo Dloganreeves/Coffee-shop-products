@@ -1,0 +1,16 @@
+﻿@model Product
+
+@{
+    if(Model !=null)
+    {
+        <h1>@Model.Name</h1>
+        <p>@Model.Description</p>
+        <p>Price: @Model.Price</p>
+        <p>Category: @Model.Category</p>
+    }
+    else
+    {
+        <h1>Item not in menu</h1>
+    }
+
+}
